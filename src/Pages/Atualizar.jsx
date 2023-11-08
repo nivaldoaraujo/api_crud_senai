@@ -11,14 +11,14 @@ function Atualizar(){
     const navigat = useNavigate()
 
     useEffect(() => {
-        axios.get("http://localhost:3000/usuarios/"+id)
+        axios.get("https://bd-react-uclc.onrender.com/usuarios/"+id)
         .then(res => setData(res.data))
         .catch(err => console.log(err))
     }, [])
 
     function handSubmit(event){
         event.preventDefault()
-        axios.put("http://localhost:3000/usuarios/"+id, data)
+        axios.put("https://bd-react-uclc.onrender.com/usuarios/"+id, data)
         .then(res =>{
             alert("Dados atualizados com sucesso!!")
             navigat("/")

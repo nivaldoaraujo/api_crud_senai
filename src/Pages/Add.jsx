@@ -10,7 +10,7 @@ function Add()
 
     function HandSubmit(event){
         event.preventDefault()
-        axios.post("http://localhost:3000/usuarios", inputData)
+        axios.post("https://bd-react-uclc.onrender.com/usuarios", inputData)
         .then(res =>{
             alert("Dados inseridos com sucesso")
             navigat('/')

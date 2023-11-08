@@ -11,7 +11,7 @@ const [valor, setValor] = useState([])
 const navigat = useNavigate()
 
 useEffect(() => {
-    axios.get("http://localhost:3000/usuarios")
+    axios.get("https://bd-react-uclc.onrender.com/usuarios")
     .then(res => setValor(res.data))
     .catch(err => console.log(err))
 })
@@ -56,7 +56,7 @@ useEffect(() => {
     function hardSubmit(id){
         const conf = window.confirm("Deseja realmente excluir esse registro?")
         if(conf){
-            axios.delete("http://localhost:3000/usuarios/"+id)
+            axios.delete("https://bd-react-uclc.onrender.com/usuarios/"+id)
             .then(res => {
                 alert("Dados exclidos com sucesso!")
                 navigat("/")
